@@ -31,7 +31,6 @@ if negative:
 
     binary = new_binary
 
-    # Add 1
     carry = 1
     new_binary = ""
 
