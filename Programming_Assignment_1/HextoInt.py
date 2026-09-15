@@ -1,4 +1,4 @@
-# To use to program, type "python3 HextoInt.py" in the terminal
+# To use to program, type "python3 HextoInt.py" in the terminal remember to be in the folder first!
 digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
 
 hexadecimal = input("Enter a 32-bit hexadecimal number: ")
