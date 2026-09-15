@@ -8,18 +8,15 @@ negative = False
 if number < 0:
     negative = True
     number = -number
-
 binary = ""
-
 while number > 0:
-    remainder = number % 2
-    binary = str(remainder) + binary
-    number = number // 2
+    remainder = number%2
+    binary = str(remainder)+binary
+    number = number//2
 
-while len(binary) < 32:
-    binary = "0" + binary
+while len(binary)<32:
+    binary = "0"+binary
 
-# If negative
 if negative:
     new_binary = ""
 
@@ -33,30 +30,23 @@ if negative:
 
     carry = 1
     new_binary = ""
-
-    for i in range(31, -1, -1):
+    for i in reversed(range(32)):
         bit = int(binary[i]) + carry
-
         if bit == 2:
             new_binary = "0" + new_binary
             carry = 1
         else:
             new_binary = str(bit) + new_binary
             carry = 0
-
     binary = new_binary
 
 # binary to hexadecimal
 hexadecimal = ""
-
 for i in range(0, 32, 4):
-    group = binary[i:i + 4]
-
+    group = 0
     value = 0
-
     for bit in group:
         value = value * 2 + int(bit)
-
     hexadecimal = hexadecimal + digits[value]
 
 print("Binary:", binary)
